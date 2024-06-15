@@ -2,7 +2,7 @@ make sure to remove the previous files before placing other ones there
 
 put everything in the nixos folder into your /etc/nixos folder
 
-then run **sudo nixos-rebuild switch --flake ".#(your username here!!!!)"** ##**IN THE /etc/nixos/ FOLDER OTHERWISE IT WILL FAIL**
+then run **sudo nixos-rebuild switch --flake ".#(your username here!!!!)"** **IN THE /etc/nixos/ FOLDER OTHERWISE IT WILL FAIL**
 
 reboot, and after logging in type "Hyprland" to open the desktop, i dont use a login manager for now
 
