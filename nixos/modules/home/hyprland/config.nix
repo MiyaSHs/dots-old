@@ -87,7 +87,7 @@
         "$mainMod, F, fullscreen, "
         "$mainMod, A, togglefloating,"
         "$mainMod, S, exec, $menu"
-        "$mainMod, L, exec, swaylock -i ~/Pictures/wallpapers/nix.png"
+        "$mainMod, L, exec, swaylock -i ~/Pictures/lockscreen/main.png"
         "$mainMod, R, togglesplit,"
         "$mainMod, W, exec, $fileManager"
 	"$mainMod SHIFT, Q, exit,"
