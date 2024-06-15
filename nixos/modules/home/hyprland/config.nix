@@ -93,8 +93,9 @@
 	"$mainMod SHIFT, Q, exit,"
 
         # screenshot
-        "$mainMod, V, exec, grimblast --notify --cursor --freeze save area ~/Pictures/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
-        "$mainMod SHIFT, V, exec, grimblast --notify --cursor --freeze copy area"
+        "$mainMod, V, exec, grimblast --notify --cursor --freeze copysave area ~/Pictures/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
+        "$mainMod SHIFT, V, exec, grimblast --notify --cursor --freeze copysave output ~/Pictures/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
+ 
 
         # switch focus
         "$mainMod, left, movefocus, l"
