@@ -26,7 +26,7 @@
         gaps_out = 10;
         border_size = 2;
         "col.active_border" = "$accent";
-        "col.inactive_border" = "$base";
+        "col.inactive_border" = "$mantle";
       };
 
       dwindle = {
@@ -56,8 +56,6 @@
         drop_shadow = false;
       };
 
-      blurls="waybar";
-
       animations = {
         enabled = true;
 
@@ -77,7 +75,7 @@
 
       "$mainMod" = "SUPER";
       "$terminal" = "kitty";
-      "$fileManager" = "nemo";
+      "$fileManager" = "thunar";
       "$menu" = "wofi --show drun";
       "$browser" = "librewolf";
 
@@ -89,9 +87,10 @@
         "$mainMod, F, fullscreen, "
         "$mainMod, A, togglefloating,"
         "$mainMod, S, exec, $menu"
-        "$mainMod, L, exec, swaylock"
+        "$mainMod, L, exec, swaylock -i ~/Pictures/wallpapers/nix.png"
         "$mainMod, R, togglesplit,"
         "$mainMod, W, exec, $fileManager"
+	"$mainMod SHIFT, Q, exit,"
 
         # screenshot
         "$mainMod, V, exec, grimblast --notify --cursor --freeze save area ~/Pictures/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"

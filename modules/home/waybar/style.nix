@@ -15,7 +15,7 @@
     }
 
     window#waybar {
-        background-color: alpha(@base,0.8);
+        background-color: @base;
     }
     #workspaces {
         font-size: 15px;

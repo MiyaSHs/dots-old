@@ -13,6 +13,8 @@
     ++ [(import ./mako.nix)]                      # notification deamon
     ++ [(import ./nvim.nix)]                      # neovim editor
     ++ [(import ./mpv.nix)]
+    ++ [(import ./spicetify.nix)]
+    ++ [(import ./vscodium.nix)]
     ++ [(import ./packages.nix)]                  # other packages
     ++ [(import ./starship.nix)]                  # shell prompt
     ++ [(import ./waybar)]                        # status bar

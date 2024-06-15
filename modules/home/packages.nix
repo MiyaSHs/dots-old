@@ -4,7 +4,6 @@
     gimp
     gtrash                            # rm replacement, put deleted files in system trash
     libreoffice
-    cinnamon.nemo-with-extensions     # file manager
     cmatrix
     gparted                           # partition manager
     imv
@@ -34,7 +33,6 @@
     qbittorrent
     wine
     adwsteamgtk
-    fastfetch
     easyeffects
     qpwgraph
     vulkan-tools
@@ -43,6 +41,9 @@
     catppuccinifier-gui
     catppuccinifier-cli
     element-desktop
-    python3
+    upscayl
+    ani-cli
+    xfce.thunar
+    kdePackages.qtstyleplugin-kvantum
   ]);
 }

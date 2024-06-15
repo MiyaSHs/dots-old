@@ -48,7 +48,7 @@
     };
     cpu= {
         format= "  {usage}%";
-        format-alt= " {avg_frequency} GHz";
+        format-alt= "  {avg_frequency} GHz";
         interval= 2;
     };
     disk = {
@@ -71,8 +71,9 @@
     };
     pulseaudio= {
         format= "{icon} {volume}%";
+	format-muted= "  {volume}%";
         format-icons= {
-            default= [" "];
+	  default= [" " " " " "];
         };
         scroll-step= 5;
         on-click= "pavucontrol";

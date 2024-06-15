@@ -8,13 +8,15 @@
     hypr-contrib.url = "github:hyprwm/contrib";
     hyprpicker.url = "github:hyprwm/hyprpicker";
 
+    spicetify-nix.url = "github:the-argus/spicetify-nix";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, catppuccin, home-manager, ... }@inputs:
+  outputs = { nixpkgs, catppuccin, home-manager, spicetify-nix, ... }@inputs:
   let
     username = "awoeeq";
     system = "x86_64-linux";
@@ -36,7 +38,7 @@
             home-manager = {
 	      useGlobalPkgs = true;
               useUserPackages = true;
-	      extraSpecialArgs = { inherit inputs username; };
+	      extraSpecialArgs = { inherit inputs username spicetify-nix; };
               users.${username} = {
 	        imports = [
                   ./modules/home
@@ -49,8 +51,7 @@
             };
           }
 	];
-        specialArgs = { host="awoeeq"; inherit inputs username ; };
-
+        specialArgs = { host="awoeeq"; inherit inputs username spicetify-nix ; };
       };
     };
   };
