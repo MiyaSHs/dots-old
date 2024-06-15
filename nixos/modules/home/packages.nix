@@ -45,5 +45,6 @@
     ani-cli
     xfce.thunar
     kdePackages.qtstyleplugin-kvantum
+    python3
   ]);
 }
