@@ -8,4 +8,6 @@ also change the user "awoeeq" everywhere where it is mentioned with your usernam
 
 use the "waypaper" app to set your wallpaper, hyprland will recall what you selected there every reboot
 
-to have the same fetch icon as me, put "fastfetch.png" into your /home/**your username**/Pictures folder, thats where fastfetch looks for it 
+to have the same fetch icon as me, put "fastfetch.png" into your ~/Pictures folder, thats where fastfetch looks for it 
+
+the wallhaven- files are my wallpapers, you dont need to put them in any special folder since, as explained above, you should set wallpapers throught waypaper, not in any declaritive way inside the nixos config, but if you wanna know i usually put em in ~/Pictures/wallpapers to not clutter my Pictures folder too much
