@@ -16,3 +16,6 @@ to have the same fetch icon as me, put "fastfetch.png" into your ~/Pictures fold
 the wallhaven- images are my wallpapers, you dont need to put them in any special folder since, as explained above, you should set wallpapers through waypaper, not in any declaritive way inside the nixos config, but if you wanna know i usually put em in ~/Pictures/wallpapers to not clutter my Pictures folder too much
 
 the default swaylock bind "Super + L" looks for main.png in the ~/Pictures/lockscreen/ folder, put the nix.png file there, if you want that image to be the lockscreen of course
+
+Preview :
+![2024-06-15-At-07h21m49s](https://github.com/MiyaSHs/dots/assets/124814309/4f09aac8-77a1-4005-9ab4-d579488fff89)
