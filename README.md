@@ -17,5 +17,7 @@ the wallhaven- images are my wallpapers, you dont need to put them in any specia
 
 the default swaylock bind "Super + L" looks for main.png in the ~/Pictures/lockscreen/ folder, put the nix.png file there, if you want that image to be the lockscreen of course
 
+use the "selectdefaultapplication" app to set your default apps
+
 Preview :
 ![2024-06-15-At-07h21m49s](https://github.com/MiyaSHs/dots/assets/124814309/4f09aac8-77a1-4005-9ab4-d579488fff89)
