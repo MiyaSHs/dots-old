@@ -19,5 +19,7 @@ the default swaylock bind "Super + L" looks for main.png in the ~/Pictures/locks
 
 use the "selectdefaultapplication" app to set your default apps
 
+my spotify is also not declared in the nix config, atleast not most of it, the theme needs to be installed manually in spotify's "marketplace" section, its the comfy theme, install it and set the catppuccin-mocha variant
+
 Preview :
 ![2024-06-15-At-07h21m49s](https://github.com/MiyaSHs/dots/assets/124814309/4f09aac8-77a1-4005-9ab4-d579488fff89)
