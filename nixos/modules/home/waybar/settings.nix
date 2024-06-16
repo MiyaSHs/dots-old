@@ -14,24 +14,25 @@
         "hyprland/workspaces"
     ];
     modules-center= [
-        "clock"
+        "cava"
     ];
     modules-right= [
-        "tray" 
+        "tray"
         "cpu"
         "memory"
         "disk"
         "pulseaudio" 
         "network"
+	"clock"
     ];
     clock= {
         calendar = {
           format = { today = "<span color='#b4befe'><b><u>{}</u></b></span>"; };
         };
-        format = "{:%H:%M}";
+        format = "  {:%H:%M}";
         tooltip= "true";
         tooltip-format= "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-        format-alt= "{:%d/%m}";
+        format-alt= "  {:%d/%m}";
     };
     "hyprland/workspaces" = {
         format = "{icon}";
@@ -42,13 +43,22 @@
         };
 	sort-by-number = "true";
     };
+    cava= {
+      bars= 28;
+      bar_delimiter= 0;
+      sleep_timer= 60;
+      hide_on_silence= false;
+      source= "auto";
+      input_delay= 0;
+      format-icons= ["▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
+    };
     memory= {
         format= "  {percentage}%";
 	inverval= 2;
     };
     cpu= {
-        format= "  {usage}%";
-        format-alt= "  {avg_frequency} GHz";
+        format= "  {usage}%";
+        format-alt= "  {avg_frequency} GHz";
         interval= 2;
     };
     disk = {
