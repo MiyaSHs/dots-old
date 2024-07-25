@@ -16,6 +16,7 @@
     ++ [(import ./imv.nix)]
     ++ [(import ./spicetify.nix)]
     ++ [(import ./vscodium.nix)]
+    ++ [(import ./keyring.nix)]
     ++ [(import ./packages.nix)]                  # other packages
     ++ [(import ./starship.nix)]                  # shell prompt
     ++ [(import ./waybar)]                        # status bar
