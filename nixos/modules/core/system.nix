@@ -14,6 +14,7 @@
 
   zramSwap.enable = true;
   systemd.oomd.enable = true;
+  systemd.enableCgroupAccounting = true;
   console.useXkbConfig = true;
   time.timeZone = "America/Sao_Paulo";
   i18n.defaultLocale = "en_US.UTF-8";
