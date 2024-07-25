@@ -1,6 +1,5 @@
 { self, pkgs, lib, inputs, ...}: 
 {
-  # imports = [ inputs.nix-gaming.nixosModules.default ];
   nix = {
     settings = {
       auto-optimise-store = true;
@@ -14,13 +13,10 @@
   };
 
   zramSwap.enable = true;
-
-  environment.systemPackages = with pkgs; [
-  ];
-
+  systemd.oomd.enable = true;
   console.useXkbConfig = true;
   time.timeZone = "America/Sao_Paulo";
   i18n.defaultLocale = "en_US.UTF-8";
   nixpkgs.config.allowUnfree = true;
-  system.stateVersion = "24.05";
+  system.stateVersion = "24.11";
 }
