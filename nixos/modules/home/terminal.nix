@@ -1,11 +1,24 @@
-{ config, pkgs, ...}: 
+{ config, pkgs, lib, inputs, ...}: 
 {
+  programs.kitty = {
+    enable = true;
+    shellIntegration.enableFishIntegration = true;
+    font.name = "CaskaydiaCove Nerd Font";
+    settings = {
+      confirm_os_window_close = 1;
+      background_opacity = "0.5";  
+      enable_audio_bell = false;
+    };
+  };
   programs.fish = {
     enable = true;
     shellInit = "fastfetch";
     interactiveShellInit = ''
       set -U fish_greeting # Disable greeting
     '';
+  };
+  programs.starship = {
+    enable = true;
   };
   programs.fastfetch = {
     enable = true;
@@ -53,5 +66,8 @@
       ];
     };
   };
-  programs.kitty.shellIntegration.enableFishIntegration = true;
+  programs.btop = {
+    enable = true;
+  };
+  home.packages = (with pkgs; [ nvtopPackages.amd ]);
 }
