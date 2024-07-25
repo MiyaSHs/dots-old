@@ -1,11 +1,12 @@
 { pkgs, ... }:
 {  
   hardware = {
-    opengl = {
+    graphics = {
       enable = true;
-      driSupport = true;
-      driSupport32Bit = true;
+      enable32Bit = true;
     };
     enableRedistributableFirmware = true;
   };
+  services.system76-scheduler.enable = true;
+  hardware.cpu.amd.updateMicrocode = true;
 }
