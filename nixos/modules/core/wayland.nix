@@ -1,13 +1,20 @@
 { inputs, pkgs, ... }:
 {
-  programs.hyprland = {
-    enable = true;
-  };
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-hyprland
-    ];
   };
+  services.xserver = {
+    enable = true;
+    xkb = {
+      layout = "us";
+      variant = "colemak_dh";
+    };
+    displayManager = {
+      setupCommands =
+      "
+      xrandr --output HDMI-A-1 --rate 240
+      ";
+      sddm.enable = true;
+    };
 }
