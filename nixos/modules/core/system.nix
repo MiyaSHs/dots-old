@@ -16,6 +16,11 @@
   systemd.oomd.enable = true;
   systemd.enableCgroupAccounting = true;
   console.useXkbConfig = true;
+  programs.dconf.enable = true;
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
   time.timeZone = "America/Sao_Paulo";
   i18n.defaultLocale = "en_US.UTF-8";
   nixpkgs.config.allowUnfree = true;
