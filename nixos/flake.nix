@@ -2,21 +2,17 @@
   inputs = {
     # NixOS official package source, using the nixos-unstable branch here
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-
     catppuccin.url = "github:catppuccin/nix";
-
     hypr-contrib.url = "github:hyprwm/contrib";
     hyprpicker.url = "github:hyprwm/hyprpicker";
-
     spicetify-nix.url = "github:the-argus/spicetify-nix";
-
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, catppuccin, home-manager, spicetify-nix, ... }@inputs:
+  outputs = { self, nixpkgs, catppuccin, home-manager, spicetify-nix, ... }@inputs:
   let
     username = "awoeeq";
     system = "x86_64-linux";
@@ -28,17 +24,18 @@
   in
   {
     nixosConfigurations = {
-      awoeeq = nixpkgs.lib.nixosSystem {
+      ${username} = lib.nixosSystem {
         inherit system;
         modules = [ 
 	  (import ./main)
+          specialArgs = { host="${username}"; inherit inputs username spicetify-nix ; };
 	  catppuccin.nixosModules.catppuccin
           home-manager.nixosModules.home-manager
           {
             home-manager = {
 	      useGlobalPkgs = true;
               useUserPackages = true;
-	      extraSpecialArgs = { inherit inputs username spicetify-nix; };
+	      extraSpecialArgs = { inherit inputs; };
               users.${username} = {
 	        imports = [
                   ./modules/home
@@ -46,12 +43,11 @@
                 ];
 		home.username = "${username}";
 		home.homeDirectory = "/home/${username}";
-                home.stateVersion = "24.05";
+                home.stateVersion = "24.11";
               };
             };
           }
 	];
-        specialArgs = { host="awoeeq"; inherit inputs username spicetify-nix ; };
       };
     };
   };
