@@ -6,6 +6,6 @@
   boot.loader.grub.useOSProber = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.plymouth.enable = true;
-  boot.kernel.sysctl."vm.max_map_count" = 2147483642;
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.kernel.sysctl."vm.max_map_count" = 1048576;
+  boot.kernelPackages = pkgs.linuxPackages_testing;
 }
