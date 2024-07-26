@@ -3,7 +3,7 @@
     # NixOS official package source, using the nixos-unstable branch here
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     catppuccin.url = "github:catppuccin/nix";
-    inputs.hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     hypr-contrib.url = "github:hyprwm/contrib";
     hyprpicker.url = "github:hyprwm/hyprpicker";
     spicetify-nix.url = "github:the-argus/spicetify-nix";
@@ -25,12 +25,11 @@
   in
   {
     nixosConfigurations = {
-      ${username} = lib.nixosSystem {
+      desktop = lib.nixosSystem {
         inherit system;
         specialArgs = { inherit inputs; };
         modules = [ 
 	  (import ./main)
-          #specialArgs = { host="${username}"; inherit inputs username spicetify-nix ; };
 	  catppuccin.nixosModules.catppuccin
           home-manager.nixosModules.home-manager
           {
